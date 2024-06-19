@@ -1,0 +1,45 @@
+{%extends 'base.html' %}
+
+{%block title%}
+
+        {%endblock%}
+
+
+
+{%block body%}
+<!-- Pending Fee -->
+<section class="container text-center">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="fee-container">
+        <h2>Eniquiry Information</h2>
+        <table class="table table-striped">
+          <thead>
+            <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>mobile</th>
+        <th>course</th>
+        <th>fees</th>
+    </tr>
+          </thead>
+          <tbody>
+            {%for i in obj%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.first_name}}</td>
+        <td>{{i.mobile}}</td>
+        <td>{{i.course}}</td>
+        <td>{{i.fees}}</td>
+
+    </tr>
+    {%endfor%}
+            <!-- Add more rows as needed -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%endblock%}

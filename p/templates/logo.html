@@ -1,0 +1,14 @@
+{%extends 'base.html'%}
+
+{%block title%}
+
+        {%endblock%}
+
+{%block body%}
+<form method="post",action="{% url 'LO'%}">
+    {%csrf_token%}
+{{obj.as_p}}
+    <input type="submit" name="LO">
+</form>
+
+        {%endblock%}

@@ -1,0 +1,50 @@
+{%extends 'base.html' %}
+{%load widget_tweaks %}
+{%block title%}
+
+        {%endblock%}
+
+{%block body%}
+
+
+
+<section class="container text-center">
+  <div class="row">
+    <div class="col-md-6 offset-md-3">
+      <div class="form-container">
+        <h2>Registration Form</h2>
+        <form method="post">
+          {%csrf_token%}
+          <div class="form-group">
+            {%  render_field obj.stu_name class="form-control" placeholder=" Name"%}
+          </div>
+          <div class="form-group">
+            {%  render_field obj.mobile class="form-control" placeholder="mobile number "%}
+          </div>
+            <div class="form-group">
+            {%  render_field obj.age class="form-control" placeholder="Age"%}
+          </div>
+            <div class="form-group">
+            {% render_field obj.address class="form-control" placeholder=" Address"%}
+          </div>
+          <div class="form-group">
+              {% render_field obj.course class="form-control" placeholder="Course"%}
+          </div>
+
+            <div class="form-group">
+            {% render_field obj.fees class="form-control" placeholder="Fee"%}
+          </div>
+          <div class="form-group">
+            {% render_field obj.paid_fees class="form-control" placeholder="Paid Fee"%}
+          </div>
+          <div class="form-group">
+            {% render_field obj.trainer_name class="form-control" placeholder="Trainer Name"%}
+          </div>
+          <button type="submit" class="btn btn-primary">Register</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+        {%endblock%}

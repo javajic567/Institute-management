@@ -1,0 +1,50 @@
+{%extends 'base.html' %}
+
+{%block title%}
+
+        {%endblock%}
+
+
+
+{%block body%}
+
+<section class="container text-center">
+  <div class="row">
+    <div class="col-md-10 offset-md-1">
+      <div class="fee-container">
+        <h2>Pending Fee</h2>
+        <table class="table table-striped">
+          <thead>
+    <tr>
+        <th>id</th>
+        <th>name</th>
+        <th>mobile</th>
+        <th>course</th>
+        <th>fees</th>
+        <th>paid_fees</th>
+        <th>pendingfee</th>
+        <th>trainer_name</th>
+    </tr>
+    </thead>
+    <tbody>
+    {%for i in obj1%}
+    <tr>
+        <td>{{i.id}}</td>
+        <td>{{i.stu_name}}</td>
+        <td>{{i.mobile}}</td>
+        <td>{{i.course}}</td>
+        <td>{{i.fees}}</td>
+        <td>{{i.paid_fees}}</td>
+        <td>{{i.pendingfee}} <a href="{%url 'pay' i.id %}">pay</a></td>
+        <td>{{i.trainer_name}}</td>
+
+    </tr>
+    {%endfor%}
+    </tbody>
+     </table>
+      </div>
+    </div>
+  </div>
+</section>
+
+{%endblock%}

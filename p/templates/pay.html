@@ -1,0 +1,14 @@
+{%extends 'base.html' %}
+
+{%block title%}
+
+        {%endblock%}
+
+{%block body%}
+<form method="post">
+        {%csrf_token%}
+<p>{{obj.stu_name}} you need to pay {{obj.pendingfee}}</p>
+
+<input type="submit">
+        </form>
+        {%endblock%}

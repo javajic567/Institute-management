@@ -1,0 +1,43 @@
+{%extends 'base.html' %}
+{%load static%}
+{%block title%}
+        {%endblock%}
+{%block body%}
+
+
+
+{%include 'navbar.html'%}
+<!-- Jumbotron -->
+<div class="jumbotron text-center">
+  <h1>Welcome to Institute Management System</h1>
+  <p>A centralized platform for managing institutes, courses, students, and more.</p>
+  <a href="#" class="btn btn-primary btn-lg">Get Started</a>
+</div>
+<!-- Features -->
+<div class="container text-center features">
+  <div class="row">
+    <div class="col-md-4">
+      <i class="fas fa-users feature-icon"></i>
+      <h3 class="feature-heading">Manage Students</h3>
+      <p>Efficiently manage student information, attendance, and performance.</p>
+    </div>
+    <div class="col-md-4">
+      <i class="fas fa-book feature-icon"></i>
+      <h3 class="feature-heading">Course Management</h3>
+      <p>Create and manage courses, assign instructors, and track progress.</p>
+    </div>
+    <div class="col-md-4">
+      <i class="fas fa-cogs feature-icon"></i>
+      <h3 class="feature-heading">Administrative Tools</h3>
+      <p>Powerful administrative tools for managing staff, schedules, and resources.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="text-center py-4 bg-dark text-white">
+  <p>&copy; 2024 Institute Management System</p>
+</footer>
+
+
+        {%endblock%}
